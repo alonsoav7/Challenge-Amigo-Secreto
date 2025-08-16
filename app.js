@@ -56,5 +56,5 @@ function sortearAmigo() {
     } else {
         alert('Aún no has ingresado suficientes nombres');
     }
-contenido = "";    
+
 }
