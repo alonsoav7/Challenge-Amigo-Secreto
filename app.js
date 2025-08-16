@@ -43,7 +43,7 @@ function limpiarCaja () {
 //Función para sortear amigo
 
 function sortearAmigo() {
-    if (nombresIngresados.length >= 0){
+    if (nombresIngresados.length > 0){
         let numeroAleatorio = Math.floor(Math.random()*nombresIngresados.length);
         let lista = document.getElementById('resultado');
         let li = document.createElement("li");
@@ -52,8 +52,9 @@ function sortearAmigo() {
         p.appendChild(document.createTextNode(contenido));
         li.appendChild(p);
         lista.appendChild(li);
+        
     } else {
         alert('Aún no has ingresado suficientes nombres');
     }
-    
+contenido = "";    
 }
