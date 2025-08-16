@@ -33,8 +33,27 @@ function actualizaLista(){
     }
 }
 
+//Función para limpiar caja
 
 function limpiarCaja () {
    document.querySelector('#amigo').value = '';
    
+}
+
+//Función para sortear amigo
+
+function sortearAmigo() {
+    if (nombresIngresados.length >= 0){
+        let numeroAleatorio = Math.floor(Math.random()*nombresIngresados.length);
+        let lista = document.getElementById('resultado');
+        let li = document.createElement("li");
+        let p = document.createElement("p");
+        let contenido = `El amigo secreto sorteado es: ${nombresIngresados[numeroAleatorio]}`
+        p.appendChild(document.createTextNode(contenido));
+        li.appendChild(p);
+        lista.appendChild(li);
+    } else {
+        alert('Aún no has ingresado suficientes nombres');
+    }
+    
 }
